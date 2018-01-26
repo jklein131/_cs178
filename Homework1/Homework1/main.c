@@ -46,7 +46,7 @@ int main(void)
     while (1) 
     {
 		
-		if(!(GET_BIT(PORTB,PINB1)))
+		if(!(GET_BIT(PINB,PINB1)))
 		{	
 			wait_avr(200);
 			SET_BIT(PORTB,PINB0);
