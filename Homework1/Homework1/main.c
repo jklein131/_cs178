@@ -26,10 +26,10 @@ wait_avr(unsigned short msec)
 	TCCR0 = 0;
 }
 
-void delay()
+void delay(unsigned short msec)
 {
 	int i=0;
-	while(i<14000)
+	while(i<msec*XTAL_FRQ*1000)
 	{
 		++i;
 	}
