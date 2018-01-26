@@ -26,6 +26,14 @@ wait_avr(unsigned short msec)
 	TCCR0 = 0;
 }
 
+void delay()
+{
+	int i=0;
+	while(i<14000)
+	{
+		++i;
+	}
+}
 
 int main(void)
 {
@@ -38,7 +46,7 @@ int main(void)
     while (1) 
     {
 		
-		if(1)
+		if(!(GET_BIT(PORTB,PINB1)))
 		{	
 			wait_avr(200);
 			SET_BIT(PORTB,PINB0);
